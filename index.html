@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#00aba9">
+
+<title>AppYou Приложения</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="apple-touch-startup-image" href="assets/icons/launch.png">
+<link href="assets/icons/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="assets/icons/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+<link rel="stylesheet" href="assets/fonts/line-awesome.min.css">
+<link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&amp;display=swap">
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"> -->
+<!-- <script type="text/javascript" src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"></script> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >!function(e,t,a,n,c,m,r){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date,m=t.createElement(a),r=t.getElementsByTagName(a)[0],m.async=1,m.src="https://mc.yandex.ru/metrika/tag.js",r.parentNode.insertBefore(m,r)}(window,document,"script"),ym(88414773,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/88414773" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+
+<body class="justify-content-center">
+    <div id="main_app">
+        <Headcomponent :browser="browserName"></Headcomponent>
+        <Appcard :appcardinfo="infoForAppCard" v-if="tab=='card'"></Appcard>
+        <div id="main" style="margin-bottom: 98px;margin-top: 0px;" v-show="tab==1">
+            <div class="container" id="home" style="margin-bottom: 10px;">
+                <section class="newsletter-subscribe bg-light border rounded-3" style="padding-top: 5px;margin-top: 15px;padding-bottom: 11px;opacity: 1;"><span style="text-align: left;font-size: 18px;font-weight: bold;padding-left: 15px;color: var(--bs-gray-700);">Что такое AppYou?</span>
+                    <p class="text-muted" style="margin-left: 15px;padding-right: 15px;">Это универсальный независимый магазин мобильных приложений для Android и iOS.&nbsp;<br></p>
+                    <section class="photo-gallery" style="padding-top: 5px;">
+                        <div class="container">
+                            <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2 row-cols-xl-3 photos" data-bss-baguettebox="">
+                                <div class="col item col-md-3 item col-3 col-xl-3"><a href="#"><img class="img-fluid" src="assets/img/adroid-logo.png" style="opacity: 0.50;" aria-label="adroid-logo"></a></div>
+                                <div class="col item col-md-3 item col-3 col-xl-3" style="transform: perspective(0px);opacity: 0.80;"><a href="#" style="transform: perspective(0px);opacity: 0.80;"><img class="img-fluid" src="assets/img/ios-logo.png" style="opacity: 0.86;" aria-label="ios-logo"></a></div>
+                                <div class="col item col-md-3 item col-3 col-xl-3" style="transform: perspective(0px);opacity: 0.80;"><a href="#" style="transform: perspective(0px);opacity: 0.80;"><img class="img-fluid" src="assets/img/huawei-logo.png" style="opacity: 0.86;" aria-label="huawei-logo"></a></div>
+                                <div class="col item col-md-3 item col-3 col-xl-3" style="transform: perspective(0px);opacity: 0.80;"><a href="#" style="transform: perspective(0px);opacity: 0.80;"><img class="img-fluid" src="assets/img/xiaomi-logo.png" style="opacity: 0.86;" aria-label="xiaomi-logo"></a></div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </section><a class="btn btn-warning btn-sm rounded-3" href="https://t.me/+csIQ7tvWFz01ZDhi" style="margin-top: 20px;margin-left: 15px;color: rgb(54,40,0);opacity: 0.90;">Подписаться на Телеграм<br></a>
+                </section>
+				
+					<div id="toast_my" class="toast position-fixed bottom-0" style="z-index: 11000" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="30000">
+					  <div class="toast-header">
+						<img src="https://appyou.ru/assets/img/saa.webp" class="rounded me-2 mh-30" alt="pic" style="    height: 30px !important;">
+						<strong class="me-auto">Артём</strong>
+						<small>Только что</small>
+						<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+					  </div>
+					  <div class="toast-body">
+						Привет, чтобы установить AppYou, нажмите на стрелочку в левом верхнем углу.
+					  </div>
+					</div>
+            </div>
+            <div id="list_apps">
+                <Filtercomponent></Filtercomponent>
+                <!-- <div class="container" style="margin-top: 0px;margin-bottom: 15px;"><span class="app_block_title"><strong>Актуальное</strong></span></div> -->
+                <Error v-show="error"></Error>
+                <Applist :applist="shortAppList" v-on:changeappcard="changeAppCard" v-show="!isFiltered"></Applist>
+                <Applist :applist="filteredAppList" v-on:changeappcard="changeAppCard" v-if="isFiltered"></Applist>
+            </div>
+        </div>
+        <Categorypage :applist="filteredByCategoryAppList" :category="activCategory" :trytofind="tryToFind" v-if="tab==2"></Categorypage>
+          
+        <Tgbotspage :applist="filteredByCategoryAppList" :category="activCategory" :trytofind="tryToFind" v-if="tab==3"></Tgbotspage>
+
+        <Morepage v-if="tab=='5'"></Morepage>
+              
+        <div class="container fixed-bottom navbar_bottom1" id="bottom_navbar"
+            style="background: rgba(250,250,250,0.95);min-height: 58px;height: 59px;border-top: 1px solid #E1E1E1;">
+            <div class="row">
+                <div class="col ripple" @click="tabChange" data-id="1">
+                    <p class="navbar_bottom1_pic" style="margin-bottom: 0px;text-align: center;"><i
+                            class="la la-home"></i></p>
+                    <p class="navbar_bottom1_title" style="text-align: center;">Главная</p>
+                </div>
+                <div class="col ripple" @click="tabChange" data-id="2">
+                    <p class="navbar_bottom1_pic" style="margin-bottom: 0px;text-align: center;">
+                        <svg class="bi bi-boxes" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                            fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z">
+                            </path>
+                        </svg>
+                    </p>
+                    <p class="navbar_bottom1_title" style="text-align: center;">Приложения</p>
+                </div>
+                <div class="col ripple" @click="tabChange" data-id="3">
+                    <p class="navbar_bottom1_pic" style="margin-bottom: 0px;text-align: center;"><i
+                            class="icon-paper-plane"></i></p>
+                    <p class="navbar_bottom1_title"
+                        style="text-align: center;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">TG боты
+                    </p>
+                </div>
+                <div class="col ripple" @click="tabChange" data-id="5">
+                    <p class="navbar_bottom1_pic" style="margin-bottom: 0px;text-align: center;"><i
+                            class="icon ion-ios-settings"></i></p>
+                    <p class="navbar_bottom1_title" style="text-align: center;">Ещё</p>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-android">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Добавить на главный экран<br></h5><button type="button"
+                        class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center"><img
+                                    class="shadow-sm align-items-center align-content-center"
+                                    src="assets/img/android_home_screen_192.png"
+                                    style="width: 100px;height: 100px;border: 1px solid rgb(200,200,200);border-radius: 15px;">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center" style="font-size: 23px;"><strong>AppYou</strong><br></p>
+                    <p>Установите AppYou на главный экран вашего Android.<br>Нажми &nbsp;<svg
+                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                            viewBox="0 0 16 16" class="bi bi-three-dots-vertical" style="font-size: 23px;">
+                            <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z">
+                            </path>
+                        </svg>&nbsp;на и добавь на главный экран</p>
+                </div>
+            </div>
+            <div id="offcanvas-iphone" class="offcanvas offcanvas-start" tabindex="-1">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Добавить на главный экран<br /></h5><button class="btn-close text-reset"
+                        type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center"><img
+                                    class="shadow-sm align-items-center align-content-center"
+                                    src="assets/img/android_home_screen_192.png"
+                                    style="width: 100px;height: 100px;border: 1px solid rgb(200,200,200);border-radius: 15px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center" style="font-size: 23px;"><strong>AppYou</strong><br /></p>
+                    <p>Установите AppYou на главный экран вашего iPhone.<br /></p>
+                    <p>1. Нажмите на иконку снизу<br /></p><img src="assets/img/share_button.png" style="width: 50%;" />
+                    <p><br /></p>
+                    <p>2. Далее выберите<br /></p><img src="assets/img/step2_add_home2.jpg" style="width: 101%;" />
+                </div>
+            </div>
+            <button class="btn btn-sm btn-primary rounded-circle position-fixed translate-middle d-none"
+                onclick="scrollToTop()" id="back-to-up"
+                style="height: 40px;width: 40px;color: #5e5e5e;background-color: #d5d5d5; bottom: 55px; right: 11px;">
+                <i class="la la-arrow-up" aria-hidden="true"></i>
+            </button>
+        </div>
+	
+
+
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script> -->
+    <!-- <script>var md = new MobileDetect(window.navigator.userAgent);</script> -->
+    <script src="assets/js/ua-parser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/appList.vue.js"></script>
+    <script src="assets/js/error.vue.js"></script>
+    <script src="assets/js/appCard.vue.js"></script>
+    <script src="assets/js/head.vue.js"></script>
+    <script src="assets/js/filter.vue.js"></script>
+    <script src="assets/js/categoryPage.vue.js"></script>
+    <script src="assets/js/TGbotsPage.vue.js"></script>
+    <script src="assets/js/morePage.vue.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

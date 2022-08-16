@@ -1,0 +1,25 @@
+{
+  "short_name": "AppYou",
+  "name": "AppYou",
+  "icons": [
+    {
+      "src": "https://appyou.ru/assets/img/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://appyou.ru/assets/img/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "prefer_related_applications": false
+}
